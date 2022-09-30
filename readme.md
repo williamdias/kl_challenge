@@ -22,13 +22,24 @@ Whenever you find a question, it should be answered in place. All questions are 
 
 - Prepare your environment with CMake, a C++ 17 compiler and pthread. As far as I can remember, these are the only requirements.
 - You can build the project by running `./bin/build_macos.sh` or `./bin/build_linux.sh`, but it will probably fail. What is the cause?
+  Answer: It could not find 2 libraries. Asan and ubsan.
 - Edit the `src/CMakeLists.txt` - and the `cmake/generate_ar_input_file.cmake` if you are on linux - to fix it.
+  Answer: By adding set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address") everything run properly.
 
 ### 2. Understanding Silent-Face-Anti-Spoofing
 
 - You should start from the `test.py` file.
 - Take a look at the networks' architecture. What is the last layer?
+  `Answer`: Lines 63-65 in 'test.py' indicate that we have an array of 2 float numbers. by taking argmax
+  we basically take the biggest probability. If the result is 1 we have a real face.
 - What preprocessing operations an image undergoes before being inputted to the network?
+  `Answer`: result = check_image(image) checks if Height/Width is 4/3.
+  image_bbox = model_test.get_bbox(image) where if features are greater than 192*192 then resize with linear interpolation is applied.
+  After that, blob. The known rgb averages-means of Imagenet are used for subtraction and then swap R and B due to OpenCV difference.
+  Later, we return the Bbox that our model has the maximum confidence.
+  From the path "./resources/anti_spoof_models", where exist 2 models we use them to create an average and more robust prediction.
+  prediction = np.zeros((1, 3))
+
 - Does the input image have channel-first or channel-last format?
 - What is the input image colorspace?
 - How many classes image can be classified into?
@@ -41,12 +52,16 @@ Whenever you find a question, it should be answered in place. All questions are 
 - Modify the `test.py` script to output only the genuine score.
 - Run the `test.py` script for `image_F1.jpg`, `image_F2.jpg` and `image_T1.jpg` images.
 - What are the genuine scores for each one of them?
+  Answer: 0.457481, 0.499600 and 0.495112 respectfully.
 - You will have to reproduce the scores from the previous step later when using TFLite.
 
 ### 4. Converting the model to TFLite
 
 - Is it possible to convert the model directly from PyTorch to TFLite?
+  No.
 - If not, which are the intermediates required for this conversion?
+  We have to export it in ONNX format, then with onnx-tf convert it into tensorflow model and finally
+  into TFLite model.
 - Convert the `2.7_80x80_MiniFASNetV2.pth` model to TFLite and place it inside `assets/models`.
 
 ### 5. Generating test images

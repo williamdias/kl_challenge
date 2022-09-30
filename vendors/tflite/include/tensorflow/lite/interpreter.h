@@ -31,21 +31,21 @@ limitations under the License.
 #include <utility>
 #include <vector>
 
-#include "tensorflow/lite/allocation.h"
-#include "tensorflow/lite/c/common.h"  // IWYU pragma: export
-#include "tensorflow/lite/core/api/error_reporter.h"
-#include "tensorflow/lite/core/api/profiler.h"
-#include "tensorflow/lite/core/subgraph.h"
-#include "tensorflow/lite/experimental/resource/initialization_status.h"
-#include "tensorflow/lite/experimental/resource/resource_base.h"
-#include "tensorflow/lite/external_cpu_backend_context.h"
-#include "tensorflow/lite/internal/signature_def.h"
-#include "tensorflow/lite/memory_planner.h"
-#include "tensorflow/lite/portable_type_to_tflitetype.h"
-#include "tensorflow/lite/signature_runner.h"
-#include "tensorflow/lite/stderr_reporter.h"
-#include "tensorflow/lite/string_type.h"
-#include "tensorflow/lite/type_to_tflitetype.h"
+#include "../vendors/tflite/include/tensorflow/lite/allocation.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"  // IWYU pragma: export
+#include "../vendors/tflite/include/tensorflow/lite/core/api/error_reporter.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/api/profiler.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/subgraph.h"
+#include "../vendors/tflite/include/tensorflow/lite/experimental/resource/initialization_status.h"
+#include "../vendors/tflite/include/tensorflow/lite/experimental/resource/resource_base.h"
+#include "../vendors/tflite/include/tensorflow/lite/external_cpu_backend_context.h"
+#include "../vendors/tflite/include/tensorflow/lite/internal/signature_def.h"
+#include "../vendors/tflite/include/tensorflow/lite/memory_planner.h"
+#include "../vendors/tflite/include/tensorflow/lite/portable_type_to_tflitetype.h"
+#include "../vendors/tflite/include/tensorflow/lite/signature_runner.h"
+#include "../vendors/tflite/include/tensorflow/lite/stderr_reporter.h"
+#include "../vendors/tflite/include/tensorflow/lite/string_type.h"
+#include "../vendors/tflite/include/tensorflow/lite/type_to_tflitetype.h"
 
 namespace tflite {
 

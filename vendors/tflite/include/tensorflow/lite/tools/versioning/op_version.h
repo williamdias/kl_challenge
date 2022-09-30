@@ -17,8 +17,8 @@ limitations under the License.
 
 #include <vector>
 
-#include "tensorflow/lite/schema/mutable/schema_generated.h"
-#include "tensorflow/lite/tools/versioning/op_signature.h"
+#include "../vendors/tflite/include/tensorflow/lite/schema/mutable/schema_generated.h"
+#include "../vendors/tflite/include/tensorflow/lite/tools/versioning/op_signature.h"
 
 namespace tflite {
 

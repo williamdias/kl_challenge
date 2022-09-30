@@ -19,7 +19,7 @@ limitations under the License.
 
 #include <stddef.h>
 
-#include "tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
 
 namespace tflite {
 

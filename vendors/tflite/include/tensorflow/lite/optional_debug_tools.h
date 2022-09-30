@@ -18,7 +18,7 @@ limitations under the License.
 #ifndef TENSORFLOW_LITE_OPTIONAL_DEBUG_TOOLS_H_
 #define TENSORFLOW_LITE_OPTIONAL_DEBUG_TOOLS_H_
 
-#include "tensorflow/lite/interpreter.h"
+#include "../vendors/tflite/include/tensorflow/lite/interpreter.h"
 
 namespace tflite {
 

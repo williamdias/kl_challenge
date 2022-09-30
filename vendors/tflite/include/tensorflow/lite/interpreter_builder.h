@@ -23,17 +23,18 @@ limitations under the License.
 #include <string>
 #include <vector>
 
-#include "flatbuffers/flatbuffers.h"  // from @flatbuffers
-#include "tensorflow/lite/allocation.h"
-#include "tensorflow/lite/c/common.h"
-#include "tensorflow/lite/core/api/error_reporter.h"
-#include "tensorflow/lite/core/api/op_resolver.h"
-#include "tensorflow/lite/core/subgraph.h"
-#include "tensorflow/lite/interpreter.h"
-#include "tensorflow/lite/model_builder.h"
-#include "tensorflow/lite/mutable_op_resolver.h"
-#include "tensorflow/lite/schema/schema_generated.h"
-#include "tensorflow/lite/stderr_reporter.h"
+#include "../vendors/tflite/include/flatbuffers/flatbuffers.h"  // from @flatbuffers
+#include "../vendors/tflite/include/tensorflow/lite/allocation.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/api/error_reporter.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/api/op_resolver.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/subgraph.h"
+#include "../vendors/tflite/include/tensorflow/lite/interpreter.h"
+#include "../vendors/tflite/include/tensorflow/lite/model_builder.h"
+#include "../vendors/tflite/include/tensorflow/lite/mutable_op_resolver.h"
+#include "../vendors/tflite/include/tensorflow/lite/schema/schema_generated.h"
+#include "../vendors/tflite/include/tensorflow/lite/stderr_reporter.h"
+#include "kernels/register.h"
 
 namespace tflite {
 
@@ -61,11 +62,11 @@ class InterpreterBuilder {
   /// For this constructor, the ErrorReporter will be extracted from the
   /// FlatBufferModel.
   InterpreterBuilder(const FlatBufferModel& model,
-                     const OpResolver& op_resolver);
+                     tflite::ops::builtin::BuiltinOpResolver op_resolver);
   /// Builds an interpreter given only the raw flatbuffer Model object (instead
   /// of a FlatBufferModel). Mostly used for testing.
   /// If `error_reporter` is null, then DefaultErrorReporter() is used.
-  InterpreterBuilder(const ::tflite::Model* model,
+  InterpreterBuilder(FlatBufferModel model,
                      const OpResolver& op_resolver,
                      ErrorReporter* error_reporter = DefaultErrorReporter());
   ~InterpreterBuilder();

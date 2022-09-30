@@ -16,7 +16,7 @@ limitations under the License.
 #define TENSORFLOW_LITE_TFLITE_WITH_XNNPACK_OPTIONAL_H_
 #include <memory>
 
-#include "tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
 
 namespace tflite {
 std::unique_ptr<TfLiteDelegate, void (*)(TfLiteDelegate*)>

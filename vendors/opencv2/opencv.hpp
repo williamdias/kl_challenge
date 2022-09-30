@@ -43,16 +43,16 @@
 #ifndef __OPENCV_ALL_HPP__
 #define __OPENCV_ALL_HPP__
 
-#include "opencv2/opencv_modules.hpp"
+#include "../opencv2/opencv_modules.hpp"
 
-#include "opencv2/core/core_c.h"
-#include "opencv2/core/core.hpp"
+#include "../opencv2/core/core_c.h"
+#include "../opencv2/core/core.hpp"
 #ifdef HAVE_OPENCV_FLANN
 #include "opencv2/flann/miniflann.hpp"
 #endif
 #ifdef HAVE_OPENCV_IMGPROC
-#include "opencv2/imgproc/imgproc_c.h"
-#include "opencv2/imgproc/imgproc.hpp"
+#include "../opencv2/imgproc/imgproc_c.h"
+#include "../opencv2/imgproc/imgproc.hpp"
 #endif
 #ifdef HAVE_OPENCV_PHOTO
 #include "opencv2/photo/photo.hpp"
@@ -73,8 +73,8 @@
 #include "opencv2/ml/ml.hpp"
 #endif
 #ifdef HAVE_OPENCV_HIGHGUI
-#include "opencv2/highgui/highgui_c.h"
-#include "opencv2/highgui/highgui.hpp"
+#include "../opencv2/highgui/highgui_c.h"
+#include "../opencv2/highgui/highgui.hpp"
 #endif
 #ifdef HAVE_OPENCV_CONTRIB
 #include "opencv2/contrib/contrib.hpp"

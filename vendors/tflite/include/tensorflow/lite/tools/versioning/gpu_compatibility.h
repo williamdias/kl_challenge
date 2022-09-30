@@ -17,8 +17,8 @@ limitations under the License.
 #define TENSORFLOW_LITE_TOOLS_VERSIONING_GPU_COMPATIBILITY_H_
 
 #include "absl/status/status.h"
-#include "tensorflow/lite/c/common.h"
-#include "tensorflow/lite/schema/schema_generated.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/schema/schema_generated.h"
 
 namespace tflite {
 

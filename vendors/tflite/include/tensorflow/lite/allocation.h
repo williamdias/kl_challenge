@@ -23,7 +23,7 @@ limitations under the License.
 #include <cstdlib>
 #include <memory>
 
-#include "tensorflow/lite/core/api/error_reporter.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/api/error_reporter.h"
 
 namespace tflite {
 

@@ -1,10 +1,10 @@
 # --------------------------------------------------------------------------------------------------
 # Variables definition
 # --------------------------------------------------------------------------------------------------
-
 set(CHALLENGE_LIBNAME challenge)
-
 file(GLOB_RECURSE CHALLENGE_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
 if(KL_TARGET_OS STREQUAL "linux")
   set(TFLITE_PATH ${VENDORS_DIR}/tflite/lib/linux/x86_64/libtensorflowlite.a)

@@ -19,9 +19,9 @@ limitations under the License.
 #include <cstdint>
 #include <string>
 
-#include "tensorflow/lite/c/common.h"
-#include "tensorflow/lite/core/subgraph.h"
-#include "tensorflow/lite/internal/signature_def.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/core/subgraph.h"
+#include "../vendors/tflite/include/tensorflow/lite/internal/signature_def.h"
 
 namespace tflite {
 class Interpreter;  // Class for friend declarations.
