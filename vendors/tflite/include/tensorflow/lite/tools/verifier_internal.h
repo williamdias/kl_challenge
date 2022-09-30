@@ -18,7 +18,7 @@ limitations under the License.
 
 #include <stddef.h>
 
-#include "tensorflow/lite/schema/schema_generated.h"
+#include "../vendors/tflite/include/tensorflow/lite/schema/schema_generated.h"
 
 namespace tflite {
 namespace internal {

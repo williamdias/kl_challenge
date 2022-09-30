@@ -18,8 +18,8 @@ limitations under the License.
 #ifndef TENSORFLOW_LITE_MODEL_H_
 #define TENSORFLOW_LITE_MODEL_H_
 
-#include "tensorflow/lite/interpreter_builder.h"
-#include "tensorflow/lite/model_builder.h"
+#include "../vendors/tflite/include/tensorflow/lite/interpreter_builder.h"
+#include "../vendors/tflite/include/tensorflow/lite/model_builder.h"
 
 // TODO(b/168725050): Address the issue of proxy header in this file.
 

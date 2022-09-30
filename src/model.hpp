@@ -3,12 +3,13 @@
 
 #include "kl_error.hpp"
 
-#include "opencv2/core.hpp"
+#include "../vendors/opencv2/core.hpp"
 
-#include "tensorflow/lite/model.h"
-#include "tensorflow/lite/interpreter.h"
-#include "tensorflow/lite/kernels/register.h"
-
+#include "../vendors/tflite/include/tensorflow/lite/model.h"
+#include "../vendors/tflite/include/tensorflow/lite/interpreter.h"
+#include "../vendors/tflite/include/tensorflow/lite/kernels/register.h"
+#include "../vendors/tflite/include/tensorflow/lite/tools/gen_op_registration.h"
+#include "../vendors/tflite/include/tensorflow/lite/optional_debug_tools.h"
 class Model {
 
 public:

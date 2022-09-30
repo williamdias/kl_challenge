@@ -24,10 +24,10 @@ limitations under the License.
 #include <vector>
 
 #include <gtest/gtest.h>
-#include "tensorflow/lite/internal/signature_def.h"
-#include "tensorflow/lite/interpreter.h"
-#include "tensorflow/lite/kernels/internal/compatibility.h"
-#include "tensorflow/lite/string_util.h"
+#include "../vendors/tflite/include/tensorflow/lite/internal/signature_def.h"
+#include "../vendors/tflite/include/tensorflow/lite/interpreter.h"
+#include "../vendors/tflite/include/tensorflow/lite/kernels/internal/compatibility.h"
+#include "../vendors/tflite/include/tensorflow/lite/string_util.h"
 
 namespace tflite {
 

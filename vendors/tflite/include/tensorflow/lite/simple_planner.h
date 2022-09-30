@@ -20,10 +20,10 @@ limitations under the License.
 #include <memory>
 #include <vector>
 
-#include "tensorflow/lite/c/common.h"
-#include "tensorflow/lite/graph_info.h"
-#include "tensorflow/lite/memory_planner.h"
-#include "tensorflow/lite/util.h"
+#include "../vendors/tflite/include/tensorflow/lite/c/common.h"
+#include "../vendors/tflite/include/tensorflow/lite/graph_info.h"
+#include "../vendors/tflite/include/tensorflow/lite/memory_planner.h"
+#include "../vendors/tflite/include/tensorflow/lite/util.h"
 
 namespace tflite {
 

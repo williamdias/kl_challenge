@@ -18,7 +18,7 @@ limitations under the License.
 #include <set>
 #include <string>
 
-#include "tensorflow/lite/model.h"
+#include "../vendors/tflite/include/tensorflow/lite/model.h"
 
 namespace tflite {
 namespace flex {
